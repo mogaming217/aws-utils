@@ -8,7 +8,8 @@ config.region = "ap-northeast-1"; // 適宜変更
 AWS.config.update(config);
 let apigw = new AWS.APIGateway();
 
-let str = fs.readFileSync("./csv/apigw-list.csv").toString();
+let csvPath = "./csv/apigw-list.csv"; // 適宜変更
+let str = fs.readFileSync(csvPath).toString();
 let items = new csv(str, {header: true}).parse();
 
 let length = items.length;
