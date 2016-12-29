@@ -38,6 +38,10 @@ user-name,first-password,user-group-name
 tanaka-t,foobar,hogehoge-group
 ```
 
+## iam-user-delete.js
+上記`iam-user-create.js`で作成したユーザを、グループは削除せずにユーザだけ削除します。
+上記の`user-list.csv`をそのまま使いまわします。ユーザを削除するので、注意してご利用ください。
+
 # 必要な環境
 - node
   - v6.6.0で動作確認済み
