@@ -45,6 +45,12 @@ tanaka-t,foobar,hogehoge-group
 ## lambda-delete-all.js
 指定したリージョン内のLambdaFunctionを全て削除します。注意してご利用ください。
 
+## cw-logs-delete-all.js
+CloudWatchのログをすべて削除します。注意してご利用ください。
+もし、Prefixで特定する場合（例：/aws/lambda）は、
+`CW.describeLogGroups({logGroupNamePrefix: "/aws/lambda"}, function(...){...});`とすれば
+指定したPrefixのLogGroupのみ取得してきてくれるはず（未検証）なので、これをお試しください。
+
 # 必要な環境
 - node
   - v6.6.0で動作確認済み
